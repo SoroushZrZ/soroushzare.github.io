@@ -106,7 +106,8 @@
             <h2><a href="CV.pdf" download class="cv-download">CV</a></h2> <!-- Clickable CV text for download -->
 
             <div class="cv-wrapper">
-                <iframe src="CV.pdf" id="cvFrame" title="CV"></iframe>
+                <!-- Use sandbox with allow-top-navigation to make links open in a new tab -->
+                <iframe src="CV.pdf" id="cvFrame" title="CV" sandbox="allow-same-origin allow-top-navigation allow-popups"></iframe>
             </div>
         </div>
     </div>
