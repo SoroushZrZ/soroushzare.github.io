@@ -61,20 +61,13 @@
             border: none;
             position: relative;
         }
-        /* The download link should only cover the iframe area */
-        .cv-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-        .cv-wrapper a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            background: rgba(255,255,255,0); /* Transparent overlay */
+        .cv-download {
             text-decoration: none;
+            color: #1e90ff;
+            cursor: pointer;
+        }
+        .cv-download:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -109,12 +102,14 @@
                 <li>Machine Learning</li>
                 <li>EEG Signal Processing</li>
             </ul>
-            <h2>CV</h2>
+            <!-- Make the CV text clickable to download the file -->
+            <h2><a href="CV.pdf" download class="cv-download">CV</a></h2> <!-- Clickable CV text for download -->
+
             <div class="cv-wrapper">
                 <iframe src="CV.pdf" id="cvFrame" title="CV"></iframe>
-                <a href="CV.pdf" download></a> <!-- Clickable download link only over the iframe -->
             </div>
         </div>
     </div>
+
 </body>
 </html>
