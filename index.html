@@ -60,6 +60,10 @@
             height: 800px;
             border: none;
         }
+        a.cv-link {
+            display: block;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -94,8 +98,9 @@
                 <li>EEG Signal Processing</li>
             </ul>
             <h2>CV</h2>
-            <iframe src="CV.pdf" title="CV"></iframe> <!-- Embed your CV here -->
-            <p><a href="CV.pdf" download>Click here to download my CV</a></p> <!-- Download link -->
+            <a href="CV.pdf" download class="cv-link">
+                <iframe src="CV.pdf" title="CV"></iframe> <!-- Embed your CV here and make it clickable -->
+            </a>
         </div>
     </div>
 </body>
