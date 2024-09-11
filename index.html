@@ -61,14 +61,20 @@
             border: none;
             position: relative;
         }
-        .cv-download-overlay {
+        /* The download link should only cover the iframe area */
+        .cv-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .cv-wrapper a {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 10;
-            background: rgba(0,0,0,0); /* Transparent overlay */
+            background: rgba(255,255,255,0); /* Transparent overlay */
+            text-decoration: none;
         }
     </style>
 </head>
@@ -106,10 +112,9 @@
             <h2>CV</h2>
             <div class="cv-wrapper">
                 <iframe src="CV.pdf" id="cvFrame" title="CV"></iframe>
-                <a href="CV.pdf" class="cv-download-overlay" download></a> <!-- Invisible clickable download overlay -->
+                <a href="CV.pdf" download></a> <!-- Clickable download link only over the iframe -->
             </div>
         </div>
     </div>
-
 </body>
 </html>
